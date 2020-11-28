@@ -116,6 +116,7 @@ View 1
 
 - comment moderation
 - content api (box.com)
+- user welcom email / validation
 
 ## Milestones
 
@@ -130,103 +131,59 @@ View 1
 
 2. Sign up for an account.
 3. Log in to their account if they already have one.
-4. Be redirected to their public profile page after logging in.
-5. On their public profile page, see their name, the current city they have set in their profile, and their join date.
+4. Be redirected to the articles page
+5. On their profile page, see their name, the current city they have set in their profile, and their join date.
 6. See the site-wide header on every page with:
 
 - A link to "Log Out" if they're logged in.
 - Links to "Log In" and "Sign Up" if they're logged out.
 
-7. Update their profile by making changes to their name and/or current city.
-8. See the titles of all the posts they've contributed (start with pre-seeded data).
-9. Click on the title of one of their posts and be redirected to a "show" page for that post.
+7. Update their profile by making changes to their username or email.
+8. See the links of all the comments they've authored.
+9. Click on the title of one of their comments and be redirected to a "show" page for that post.
 10. View post "show" pages with title, author, and content.
-
-### Bonuses
-
-**A user should be able to:**
-
-1. See a "default" profile photo on their profile page before adding their own photo.
-2. Update their profile photo (consider using Paperclip or Uploadcare).
-3. See their profile photo next to their posts.
-4. Receive a welcome email after creating an account.
 
 ## Sprint 2: CRUD
 
 **A user should be able to:**
 
-1. View the "San Francisco" page (at "/cities/1") including:
+1. View the "Articles" page (at "/articles/1") including:
 
-- The site-wide header.
-- The name of the city.
-- An iconic photo of the city.
+- The site-wide nav.
+- The name of the article.
+- Article Body.
 
-2. View a list of posts on the San Francisco page:
+2. View a list of articles on the Articles page:
 
 - Sorted by newest first.
-- With the post titles linked to the individual post "show" pages.
+- With the post titles linked to the individual article "show" pages.
 
-3. Use an "Add New Post" button on the San Francisco city page to pull up the new post form.
-4. Create a new post for San Francisco<!--(**Hint:** <a href="http://guides.rubyonrails.org/routing.html#nested-resources" target="_blank">nested resources</a>)-->.
-5. Click "Edit" on ANY individual post, and be redirected to the edit form.
-6. Click "delete" on ANY individual post, then:
-
-- See a pop-up that says: "Are you sure you want to delete #{title}?"
-- If the user confirms, delete the post.
-
-### Bonuses
-
-**A user should be able to:**
-
-1. Visit city pages via pretty urls, like "/cities/san-francisco".
-2. Visit user profile pages via pretty urls, like "/users/james".
-3. On a city's page:
-
-- See post content truncated to 1000 characters max, with a link to view more.
-- See a relative published date, e.g. "2 days ago".
-
+3. Admin user can use an "Add New article" button on the Articles page to pull up the new article form.
+4. Admin user can Create a new Article.
+5. Click "Edit" on ANY individual article, and be redirected to the edit form.
+6. Click "delete" on ANY individual article, then:
+	- See a pop-up that says: "Are you sure you want to delete #{title}?"
+	- If the user confirms, delete the post.
 
 ## Sprint 3: Validations & Authorization
 
 **A user should be able to:**
 
-1. View city pages for "London" and "Gibraltar".
-2. Verify that a new post they create is successfully published on the correct city page.
+1. View Article page
+2. Verify that a new comment is posted to an Article.
 
 A user CANNOT save invalid data to the database, according to the following rules:
 
 3. A user CANNOT sign up with an email (or username) that is already in use.
-4. A post's title must be between 1 and 200 characters.
-5. A post's content must not be empty.
+4. An Article's title must be between 1 and 200 characters.
+5. A comment's content must not be empty.
 
 A user is authorized to perform certain actions on the site, according to the following rules:
 
 6. A user MUST be logged in to create/update/destroy resources.
-7. A user may only edit their own profile and edit/delete their own posts.
-
-#### Bonuses
-
-**A user should be able to:**
-
-1. View an error message when form validations fail, for the following validations:
-
-- Title must be between 1 and 200 characters.
-- Content must not be empty.
-
-2. View only the 10 most recent posts on a city page (pagination), with
-
-- A link/button to the "Next" 10.
-- A link/button to the "Previous" 10.
-
-3. See a list of the city pages they've contributed to, on their public profile
-4. See the number of posts they've written for each city, next to the city's name in their profile.
-5. View all vagabond cities as markers/pins on a map on the site's homepage.
-6. Click on a pin on the homepage map and be redirected to the corresponding city page.
-
+7. A user may only edit their own profile and edit/delete their own comments.
 
 ## Sprint 4: Commenting
-
-### Bonuses
 
 **A user should be able to:**
 
