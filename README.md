@@ -1,16 +1,23 @@
 # la-seir-9-8-final-project
 
+<!-- Link to hosted App TBD -->
+
 # CS Blogger Portfolio
 
 A hosted webpage for a user to showcase thier computer science code projects, blog about their computer science learnings and provide an about section where people can connect.
 
 ## Index:
 
+- [Installation](#Installation)
 - [Scope](#Scope)
 - [User Stories](#user-stories)
 - [Wireframes](#wireframes)
 - [Data Models](#data-models)
 - [Milestones](#milestones)
+
+## Installation
+
+<!-- Installation Instructions TBD -->
 
 ## Scope
 
@@ -63,13 +70,13 @@ Users will see the landing page with the author's work. Users will see navigatio
 - 'About' 
 - 'Contact'
 
-![image]()
+![image](public/images/landing.png)
 
 ### Registration/Log-in Page
 
 Users who want to post comments will be guided to a registration page requiring an email address and password.
 
-![image]()
+![image](public/images/landing.png)
 
 ### Articles Page
 
@@ -79,16 +86,18 @@ This will allow the admin user to input Article data, as well as have access to 
 
 Regular users will be able to post, update and delete comments on articles authored by the admin user.  Comments will be held in an 'awaiting moderation' status until approved by the primary admin.
 
-![image]()
+![image](public/images/articlesViewPage.png)
 
 ### Show Article Page
 
 Details each article by: (name, date/time, comments)
 
 View 1
-<!-- ![image](public/images/article_view.png) -->
+![image](public/images/landing.png)
 
 ## Data Models
+
+![image](public/images/erd.png)
 
 ### User
 
