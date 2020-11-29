@@ -1,0 +1,27 @@
+{
+  "name": "la-seir-9-8-final-project",
+  "version": "1.0.0",
+  "description": "<!-- Link to hosted App TBD -->",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**/*.{js, jsx}\" --quiet",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/j-blaz3/la-seir-9-8-final-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/j-blaz3/la-seir-9-8-final-project/issues"
+  },
+  "homepage": "https://github.com/j-blaz3/la-seir-9-8-final-project#readme",
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-prettier": "^6.15.0",
+    "prettier": "^2.2.1"
+  }
+}
